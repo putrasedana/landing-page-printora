@@ -3,7 +3,11 @@ import { motion, Variants } from "framer-motion";
 
 const textVariants: Variants = {
   hidden: { opacity: 0, x: -100 },
-  visible: { opacity: 1, x: 0, transition: { duration: 1, ease: "easeInOut" } },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 1, ease: "easeInOut", delay: 1 },
+  },
 };
 
 const imageVariants = (delay: number): Variants => ({
@@ -33,7 +37,7 @@ const DesignCollection: React.FC = () => {
           This is one of the most exciting advantages we have. Order now and you
           will know.
         </p>
-        <Button className="border p-6 font-semibold text-lg border-[#d1f33a] text-[#d1f33a] hover:bg-[#d1f33a] hover:text-black transition">
+        <Button className="border p-6 font-semibold text-lg border-[#d1f33a] cursor-pointer text-[#d1f33a] hover:bg-[#d1f33a] hover:text-black transition">
           Lihat Semua Design
         </Button>
       </motion.div>
@@ -45,7 +49,7 @@ const DesignCollection: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={imageVariants(0.2)}
+          variants={imageVariants(0.8)}
         >
           <img
             src="https://d3pyarv4eotqu4.cloudfront.net/onlineprin/images/products_gallery_images/KAOS-HITAM_BARU.jpg"
@@ -65,7 +69,7 @@ const DesignCollection: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={imageVariants(0.4)}
+          variants={imageVariants(1)}
         >
           <img
             src="https://outerbloom.com/cdn/shop/products/OBVGIF1067_Outerbloom-Custom-Vogue-Canvas-Tote-Bag_large.jpg?v=1626259192"

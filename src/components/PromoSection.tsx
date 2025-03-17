@@ -8,7 +8,7 @@ const imageVariants: Variants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 1, ease: "easeOut", delay: 1 },
+    transition: { duration: 1, ease: "easeOut", delay: 2 },
   },
 };
 
@@ -18,7 +18,7 @@ const contentVariants: Variants = {
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.6, ease: "easeOut", delay: 1 },
+    transition: { duration: 0.6, ease: "easeOut", delay: 2 },
   },
 };
 
@@ -64,7 +64,7 @@ const PromoSection = () => {
           </div>
 
           {/* Tombol */}
-          <Button className="mt-6 bg-[#d1f33a] hover:bg-[#d1f33a] px-6 py-6 text-black text-lg">
+          <Button className="mt-6 bg-[#d1f33a] cursor-pointer hover:bg-transparent border hover:text-white hover:border-[#d1f33a] border-[#d1f33a] px-6 py-6 text-black text-lg">
             Pesan Sekarang ➤
           </Button>
         </motion.div>

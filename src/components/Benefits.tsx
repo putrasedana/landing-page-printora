@@ -34,7 +34,7 @@ export default function Benefits() {
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={isInView ? { opacity: 1, x: 0 } : {}}
-        transition={{ duration: 2, delay: 0.5 }}
+        transition={{ duration: 2, delay: 2 }}
         className="w-full md:w-1/2"
       >
         <h3 className="text-yellow-500 text-xl font-semibold lg:text-2xl">
@@ -80,7 +80,7 @@ export default function Benefits() {
         className="w-full md:w-1/2 xl:w-1/3"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={isInView ? { opacity: 1, scale: 1 } : {}}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 1, delay: 2 }}
       >
         <img
           src="https://images.tokopedia.net/img/cache/700/VqbcmM/2021/1/4/3274cbe2-92ea-4346-ad5c-6c70a14d60a0.png"

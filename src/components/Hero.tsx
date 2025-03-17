@@ -60,11 +60,9 @@ const Hero = () => {
           launched her namesake brand that became synonymous for strong
           commitment.
         </p>
-        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <Button className="mt-6 bg-[#d1f33a] hover:bg-[#d1f33a] px-6 py-6 text-black text-lg">
-            Pesan Sekarang ➤
-          </Button>
-        </motion.div>
+        <Button className="mt-6 bg-[#d1f33a] cursor-pointer hover:bg-transparent border hover:text-white hover:border-[#d1f33a] border-[#d1f33a] px-6 py-6 text-black text-lg">
+          Pesan Sekarang ➤
+        </Button>
         {/* Benefits */}
         <div className="flex items-center flex-wrap gap-4 mt-6 text-white">
           <p className="flex items-center gap-1">
