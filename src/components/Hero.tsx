@@ -16,25 +16,24 @@ const Hero = () => {
         <img
           src="https://down-id.img.susercontent.com/file/id-11134207-7rasl-m261k6wldy0k05"
           alt="Kaos Custom"
-          className="rounded-lg shadow-lg mb-20 xl:my-20"
+          className="rounded-lg shadow-lg mb-20 mt-6 xl:mb-20 xl:h-[500px]"
         />
         {/* Review Card */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: -110 }}
+          initial={{ opacity: 0, y: -100 }}
+          animate={{ opacity: 1, y: -150 }}
           transition={{ duration: 2, delay: 0.3, ease: "linear" }}
         >
-          <Card className="absolute top-[70%] left-2 bg-white text-black py-3 shadow-lg w-[95%] sm:left-1 lg:w-[80%] lg:left-3 lg:p-2 lg:top-90 xl:top-[80%] xl:w-[70%] xl:p-5">
+          <Card className="absolute top-[70%] left-2 text-black py-3 shadow-lg w-[95%] sm:left-1 lg:w-[80%] lg:left-3 lg:p-2 lg:top-[100%] xl:w-[70%] xl:p-5">
             <CardContent>
               <div className="flex items-center gap-1">
-                {[...Array(4)].map((_, i) => (
+                {[...Array(5)].map((_, i) => (
                   <Star
                     key={i}
                     className="text-yellow-500 w-5 h-5"
                     fill="currentColor"
                   />
                 ))}
-                <Star className="text-yellow-500 w-5 h-5" />
               </div>
               <p className="mt-2 italic text-sm">
                 “We have no regrets! I would like to personally thank you for

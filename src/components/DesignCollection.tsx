@@ -15,16 +15,16 @@ const imageVariants = (delay: number): Variants => ({
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 2, ease: "easeInOut", delay },
+    transition: { duration: 1.5, ease: "easeInOut", delay },
   },
 });
 
 const DesignCollection: React.FC = () => {
   return (
-    <section className="bg-[#1a0e06] text-white py-16 px-4 lg:px-16 md:py-28 xl:justify-around xl:px-20 md:px-8 flex flex-col items-center gap-4 md:flex-col-reverse xl:flex-row">
+    <section className="bg-[#1a0e06] text-white py-16 px-4 lg:px-16 md:py-28 md:px-8 flex flex-col items-center gap-4 md:flex-col xl:justify-around xl:px-20 xl:flex-row">
       {/* Text Section */}
       <motion.div
-        className="md:w-[30%]"
+        className="md:w-[100%] xl:w-[35%]"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -43,7 +43,7 @@ const DesignCollection: React.FC = () => {
       </motion.div>
 
       {/* Image Section */}
-      <div className="md:w-[55%] grid grid-cols-1 mt-4 md:grid-cols-2 gap-6">
+      <div className="md:w-[100%] xl:w-[55%] grid grid-cols-1 mt-4 md:grid-cols-2 gap-6">
         <motion.div
           className="relative"
           initial="hidden"
@@ -51,36 +51,39 @@ const DesignCollection: React.FC = () => {
           viewport={{ once: true }}
           variants={imageVariants(0.8)}
         >
-          <img
-            src="https://d3pyarv4eotqu4.cloudfront.net/onlineprin/images/products_gallery_images/KAOS-HITAM_BARU.jpg"
-            alt="Kaos Kasual"
-            className="w-full h-full object-cover rounded-lg"
-          />
-          <div className="bg-white text-black p-2 absolute bottom-0 left-0 w-full">
-            <h3 className="font-serif text-xl font-semibold">Kaos Kasual</h3>
-            <p className="text-sm">
-              This is one of the most exciting advantages we have.
-            </p>
+          <div className="bg-white text-black p-2 w-full rounded-t-2xl">
+            <img
+              src="printora-img1.jpeg"
+              alt="Kaos Custom"
+              className="w-full h-full object-contain md:h-[250px]"
+            />
+            <div className="p-2">
+              <h3 className="font-serif text-xl font-semibold">Kaos Custom</h3>
+              <p className="text-sm">
+                This is one of the most exciting advantages we have.
+              </p>
+            </div>
           </div>
         </motion.div>
 
         <motion.div
-          className="relative"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={imageVariants(1)}
         >
-          <img
-            src="https://outerbloom.com/cdn/shop/products/OBVGIF1067_Outerbloom-Custom-Vogue-Canvas-Tote-Bag_large.jpg?v=1626259192"
-            alt="Tote Bag"
-            className="w-full h-full object-cover rounded-lg"
-          />
-          <div className="bg-white text-black p-2 absolute bottom-0 left-0 w-full">
-            <h3 className="font-serif text-xl font-semibold">Tote Bag</h3>
-            <p className="text-sm">
-              This is one of the most exciting advantages we have.
-            </p>
+          <div className="bg-white text-black p-2 w-full rounded-t-2xl">
+            <img
+              src="printora-img2.jpeg"
+              alt="Kaos Kasual"
+              className="w-full h-full object-contain md:h-[250px]"
+            />
+            <div className="p-2">
+              <h3 className="font-serif text-xl font-semibold">Kaos Kasual</h3>
+              <p className="text-sm">
+                This is one of the most exciting advantages we have.
+              </p>
+            </div>
           </div>
         </motion.div>
       </div>
