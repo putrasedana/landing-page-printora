@@ -1,8 +1,7 @@
-import { MapPin, Mail } from "lucide-react";
+import { Mail, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, Variants } from "framer-motion";
 
-// Variants untuk animasi gambar
 const imageVariants: Variants = {
   hidden: { opacity: 0, x: -100 },
   visible: {
@@ -12,7 +11,6 @@ const imageVariants: Variants = {
   },
 };
 
-// Variants untuk animasi konten
 const contentVariants: Variants = {
   hidden: { opacity: 0, x: 100 },
   visible: {
@@ -24,9 +22,9 @@ const contentVariants: Variants = {
 
 const PromoSection = () => {
   return (
-    <section className="bg-[#1a0e06] md:pb-20 md:px-8 px-4 lg:px-16 pb-16 pt-6 w-full">
+    <section className="bg-gray-100 md:pb-20 md:px-8 px-4 lg:px-16 pb-20 pt-24 w-full">
       <motion.div
-        className="bg-[#444736] flex flex-col md:flex-row items-center xl:w-[80%] mx-auto justify-between rounded-lg"
+        className="bg-[#444736] flex flex-col md:flex-row items-center xl:w-[80%] mx-auto justify-between rounded-lg shadow"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -36,7 +34,7 @@ const PromoSection = () => {
           <img
             src="https://images.tokopedia.net/img/cache/700/VqbcmM/2022/8/10/1c89a923-fee1-4ec6-b0cd-4f84a68aded1.jpg"
             alt="Fashion promo"
-            className="w-full h-auto rounded-lg"
+            className="w-full h-auto rounded-l-lg"
           />
         </motion.div>
 
@@ -46,16 +44,15 @@ const PromoSection = () => {
           variants={contentVariants}
         >
           <h2 className="text-4xl font-bold font-serif">Tunggu Apa Lagi?</h2>
-          <p className="mt-3 text-gray-300">
-            We believe that fashion should be accessible, affordable,
-            contemporary, and comfortable.
+          <p className="mt-3 text-gray-300 text-lg">
+            Pesan sekarang dan jadilah bagian dari gerakan kreatif tanpa batas.
           </p>
 
           {/* Info */}
           <div className="mt-5 space-y-3">
             <div className="flex items-center">
-              <MapPin className="text-[#d1f33a] mr-3" />
-              <span className="text-gray-300">DE 19701</span>
+              <Instagram className="text-[#d1f33a] mr-3" />
+              <span className="text-gray-300">printora.id</span>
             </div>
             <div className="flex items-center">
               <Mail className="text-[#d1f33a] mr-3" />

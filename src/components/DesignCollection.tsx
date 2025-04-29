@@ -34,11 +34,11 @@ const DesignCollection: React.FC = () => {
           Koleksi Design Kami
         </h2>
         <p className="text-lg mb-6 text-gray-300">
-          This is one of the most exciting advantages we have. Order now and you
-          will know.
+          Temukan inspirasi dari beragam desain kreatif yang siap kamu pilih dan
+          pakai!
         </p>
         <Button className="border p-6 font-semibold text-lg border-[#d1f33a] cursor-pointer text-[#d1f33a] hover:bg-[#d1f33a] hover:text-black transition">
-          Lihat Semua Design
+          Lihat Semua Design ➤
         </Button>
       </motion.div>
 
@@ -58,9 +58,13 @@ const DesignCollection: React.FC = () => {
               className="w-full h-full object-contain md:h-[250px]"
             />
             <div className="p-2">
-              <h3 className="font-serif text-xl font-semibold">Kaos Custom</h3>
+              <h3 className="text-xl font-semibold">
+                This World Shall Know Pain
+              </h3>
+              <hr className="my-2 border-t border-gray-300" />
               <p className="text-sm">
-                This is one of the most exciting advantages we have.
+                Tunjukkan kekuatan dan ekspresi yang tak terucapkan lewat desain
+                ikonik bertema anime ini.
               </p>
             </div>
           </div>
@@ -79,9 +83,11 @@ const DesignCollection: React.FC = () => {
               className="w-full h-full object-contain md:h-[250px]"
             />
             <div className="p-2">
-              <h3 className="font-serif text-xl font-semibold">Kaos Kasual</h3>
+              <h3 className="text-xl font-semibold">Lazy Duck</h3>
+              <hr className="my-2 border-t border-gray-300" />
               <p className="text-sm">
-                This is one of the most exciting advantages we have.
+                Lucu dan santai! Desain karakter bebek ini cocok buat kamu yang
+                suka tampil playful tapi tetap stylish.
               </p>
             </div>
           </div>

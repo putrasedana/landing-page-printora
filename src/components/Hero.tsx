@@ -5,7 +5,7 @@ import { CheckCircle, Star } from "lucide-react";
 
 const Hero = () => {
   return (
-    <div className="bg-[#444736] text-white py-12 px-4 md:px-8 lg:px-16 xl:px-20 flex flex-col md:flex-row items-center gap-8">
+    <div className="bg-[#464838] text-white py-12 px-4 md:px-8 md:flex-row lg:px-16 xl:px-20 xl:h-screen flex flex-col items-center gap-8">
       {/* Image */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
@@ -14,9 +14,9 @@ const Hero = () => {
         className="relative md:w-1/2 xl:w-3/7 mx-auto"
       >
         <img
-          src="https://down-id.img.susercontent.com/file/id-11134207-7rasl-m261k6wldy0k05"
+          src="hero-img.jpg"
           alt="Kaos Custom"
-          className="rounded-lg shadow-lg mb-20 mt-6 xl:mb-20 xl:h-[500px]"
+          className="rounded-lg shadow-lg mb-20 mt-6 xl:mb-20"
         />
         {/* Review Card */}
         <motion.div
@@ -52,12 +52,11 @@ const Hero = () => {
         className="md:w-1/2 text-center md:text-left"
       >
         <h1 className="text-4xl font-serif font-bold xl:text-5xl">
-          Custom Kaos Kekinian
+          Kaos Custom Kekinian, Gaya Tanpa Batas
         </h1>
         <p className="text-lg mt-4 text-gray-300">
-          Dolly has been at the helm since 1996, where she developed and
-          launched her namesake brand that became synonymous for strong
-          commitment.
+          Ekspresikan gaya unikmu dengan kaos custom berkualitas premium, desain
+          suka-suka, hasil maksimal!
         </p>
         <Button className="mt-6 bg-[#d1f33a] cursor-pointer hover:bg-transparent border hover:text-white hover:border-[#d1f33a] border-[#d1f33a] px-6 py-6 text-black text-lg">
           Pesan Sekarang ➤
@@ -65,10 +64,10 @@ const Hero = () => {
         {/* Benefits */}
         <div className="flex items-center flex-wrap gap-4 mt-6 text-white">
           <p className="flex items-center gap-1">
-            <CheckCircle color="#d1f33a" size={18} /> Orisinal
+            <CheckCircle color="#d1f33a" size={18} /> 100% Original
           </p>
           <p className="flex items-center gap-1">
-            <CheckCircle color="#d1f33a" size={18} /> Bebas Biaya Kirim
+            <CheckCircle color="#d1f33a" size={18} /> Pemesanan Online
           </p>
           <p className="flex items-center gap-1">
             <CheckCircle color="#d1f33a" size={18} /> Respon Cepat
