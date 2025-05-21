@@ -36,7 +36,7 @@ const PromoSection = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
       >
-        {/* Gambar */}
+        {/* Image */}
         <motion.div className="md:w-1/2" variants={imageVariants}>
           <img
             src="https://images.tokopedia.net/img/cache/700/VqbcmM/2022/8/10/1c89a923-fee1-4ec6-b0cd-4f84a68aded1.jpg"
@@ -47,14 +47,16 @@ const PromoSection = () => {
           />
         </motion.div>
 
-        {/* Konten */}
+        {/* Content */}
         <motion.div
           className="md:w-1/2 md:pl-10 mt-6 md:mt-0 p-6 text-white"
           variants={contentVariants}
         >
-          <h2 className="text-4xl font-bold font-serif">Tunggu Apa Lagi?</h2>
+          <h2 className="text-4xl font-bold font-serif">
+            What Are You Waiting For?
+          </h2>
           <p className="mt-3 text-gray-300 text-lg">
-            Pesan sekarang dan jadilah bagian dari gerakan kreatif tanpa batas.
+            Order now and be a part of the boundless creative movement.
           </p>
 
           <div className="mt-5 space-y-3">
@@ -72,7 +74,7 @@ const PromoSection = () => {
             <div className="flex items-center">
               <Mail className="text-[#d1f33a] mr-3" />
               <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=printoraofc@gmail.com&su=Ingin%20Bertanya%20Tentang%20Pemesanan%20Kaos"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=printoraofc@gmail.com&su=Interested%20in%20Ordering%20Custom%20T-Shirts"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 underline"

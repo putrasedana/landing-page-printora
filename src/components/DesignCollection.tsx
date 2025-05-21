@@ -70,11 +70,11 @@ const DesignCollection: React.FC = () => {
         variants={textVariants}
       >
         <h2 className="text-4xl font-serif font-semibold mb-4">
-          Koleksi Design Kami
+          Our Design Collection
         </h2>
         <p className="text-lg mb-6 text-gray-300">
-          Temukan inspirasi dari beragam desain kreatif yang siap kamu pilih dan
-          pakai!
+          Discover inspiration from a variety of creative designs ready for you
+          to choose and wear!
         </p>
         <Button
           asChild
@@ -85,7 +85,7 @@ const DesignCollection: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Lihat Semua Desain ➤
+            View All Designs ➤
           </a>
         </Button>
       </motion.div>
@@ -94,16 +94,16 @@ const DesignCollection: React.FC = () => {
       <div className="md:w-full xl:w-[55%] grid grid-cols-1 md:grid-cols-2 gap-6">
         <DesignCard
           src="printora-img1.jpeg"
-          alt="Kaos Custom"
+          alt="Custom T-Shirt"
           title="This World Shall Know Pain"
-          description="Tunjukkan kekuatan dan ekspresi yang tak terucapkan lewat desain ikonik bertema anime ini."
+          description="Show strength and unspoken expression through this iconic anime-themed design."
           delay={0.6}
         />
         <DesignCard
           src="printora-img2.jpeg"
-          alt="Kaos Kasual"
+          alt="Casual T-Shirt"
           title="Lazy Duck"
-          description="Lucu dan santai! Desain karakter bebek ini cocok buat kamu yang suka tampil playful tapi tetap stylish."
+          description="Cute and chill! This duck character design is perfect for those who love to look playful yet stylish."
           delay={0.9}
         />
       </div>

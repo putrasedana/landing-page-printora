@@ -9,26 +9,27 @@ type Benefit = {
 
 const benefits: Benefit[] = [
   {
-    title: "Tanpa Minimum Order",
+    title: "No Minimum Order",
     description:
-      "Pesan satu pun bisa! Cocok untuk personal, komunitas, hingga bisnis kecil.",
+      "Even one order is fine! Perfect for individuals, communities, and small businesses.",
     imageUrl: "https://img.icons8.com/fluency/96/000000/delivery.png",
   },
   {
-    title: "Produksi Cepat & Tepat Waktu",
+    title: "Fast & On-Time Production",
     description:
-      "Desain hari ini, cetak secepatnya. Kami utamakan ketepatan dan kecepatan.",
+      "Design today, print as soon as possible. We prioritize speed and accuracy.",
     imageUrl: "https://img.icons8.com/fluency/96/clock.png",
   },
   {
-    title: "Bahan Kaos Premium",
-    description: "Nyaman dipakai harian, tidak mudah melar, dan tahan lama.",
+    title: "Premium T-Shirt Materials",
+    description:
+      "Comfortable for daily wear, resistant to stretching, and long-lasting.",
     imageUrl: "https://img.icons8.com/fluency/96/clothes.png",
   },
   {
-    title: "Cetak Sesuai Desainmu",
+    title: "Print Your Own Design",
     description:
-      "Kamu bebas berekspresi, cukup upload desain, kami bantu wujudkan!",
+      "You’re free to express yourself—just upload your design and we’ll make it happen!",
     imageUrl: "https://img.icons8.com/fluency/96/upload.png",
   },
 ];
@@ -80,10 +81,10 @@ const Benefits: React.FC = () => {
     >
       <div className="mx-auto px-6 text-center max-w-screen-xl">
         <h2 className="text-4xl font-bold mb-4 font-serif text-gray-800">
-          Keunggulan Kami
+          Our Advantages
         </h2>
         <p className="text-xl font-semibold text-gray-600 mb-12">
-          Keuntungan bagi Anda
+          Benefits for You
         </p>
         <div className="grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
           {benefits.map((benefit, i) => (
