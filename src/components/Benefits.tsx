@@ -1,4 +1,5 @@
-import React from "react";
+import React, { memo } from "react";
+import { motion } from "framer-motion";
 
 type Benefit = {
   title: string;
@@ -32,34 +33,65 @@ const benefits: Benefit[] = [
   },
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0.9, y: 30 },
+  visible: (i: number) => ({
+    opacity: 1,
+    scale: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.5,
+      type: "spring",
+    },
+  }),
+};
+
+const BenefitCard = memo(
+  ({ title, description, imageUrl, index }: Benefit & { index: number }) => (
+    <motion.div
+      className="border-4 rounded-2xl shadow-md p-6 hover:shadow-lg bg-white"
+      custom={index}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={cardVariants}
+    >
+      <img
+        loading="lazy"
+        src={imageUrl}
+        alt={title}
+        className="w-20 h-20 mx-auto mb-4 object-contain"
+      />
+      <h3 className="text-xl font-semibold text-gray-800 mb-2">{title}</h3>
+      <p className="text-gray-600">{description}</p>
+    </motion.div>
+  )
+);
+
 const Benefits: React.FC = () => {
   return (
-    <section className="py-16 bg-gray-100 xl:px-20 xl:pb-24">
-      <div className="mx-auto px-6 text-center">
+    <motion.section
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="py-24 bg-gradient-to-b from-[#d1f33a]/10 to-white xl:px-20 xl:pb-24"
+    >
+      <div className="mx-auto px-6 text-center max-w-screen-xl">
         <h2 className="text-4xl font-bold mb-4 font-serif text-gray-800">
           Keunggulan Kami
         </h2>
-        <p className="text-lg text-gray-600 mb-12">Keuntungan bagi Anda</p>
-        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
-          {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-md p-8 hover:shadow-lg transition duration-300"
-            >
-              <img
-                src={benefit.imageUrl}
-                alt={benefit.title}
-                className="w-20 h-20 mx-auto mb-6 object-contain"
-              />
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                {benefit.title}
-              </h3>
-              <p className="text-gray-600">{benefit.description}</p>
-            </div>
+        <p className="text-xl font-semibold text-gray-600 mb-12">
+          Keuntungan bagi Anda
+        </p>
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+          {benefits.map((benefit, i) => (
+            <BenefitCard key={benefit.title} {...benefit} index={i} />
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
